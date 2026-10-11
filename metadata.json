@@ -1,0 +1,6 @@
+{
+  "name": "Verifai",
+  "description": "AI-Powered Trust & Scam Detection Platform for jobs, certificates, scholarships, admissions, UPI and suspicious links.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

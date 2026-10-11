@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-teal: #0F766E;
+    --brand-teal-dark: #115E59;
+    --brand-teal-light: #CCFBF1;
+    --brand-accent: #0F766E;
+    --brand-accent-hover: #115E59;
+    --brand-accent-subtle: #F0FDFA;
+    --brand-accent-ring: rgba(15, 118, 110, 0.25);
+  }
+
+  [data-accent="teal"] {
+    --brand-accent: #0F766E;
+    --brand-accent-hover: #115E59;
+    --brand-accent-subtle: #F0FDFA;
+    --brand-accent-ring: rgba(15, 118, 110, 0.25);
+  }
+
+  [data-accent="blue"] {
+    --brand-accent: #0284C7;
+    --brand-accent-hover: #0369A1;
+    --brand-accent-subtle: #F0F9FF;
+    --brand-accent-ring: rgba(2, 132, 199, 0.25);
+  }
+
+  [data-accent="violet"] {
+    --brand-accent: #7C3AED;
+    --brand-accent-hover: #6D28D9;
+    --brand-accent-subtle: #F5F3FF;
+    --brand-accent-ring: rgba(124, 58, 237, 0.25);
+  }
+
+  [data-accent="green"] {
+    --brand-accent: #15803D;
+    --brand-accent-hover: #166534;
+    --brand-accent-subtle: #F0FDF4;
+    --brand-accent-ring: rgba(21, 128, 61, 0.25);
+  }
+
+  [data-accent="rose"] {
+    --brand-accent: #E11D48;
+    --brand-accent-hover: #BE123C;
+    --brand-accent-subtle: #FFF1F2;
+    --brand-accent-ring: rgba(225, 29, 72, 0.25);
+  }
+
+  body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom utility classes */
+.bg-brand-accent {
+  background-color: var(--brand-accent);
+}
+.bg-brand-accent-subtle {
+  background-color: var(--brand-accent-subtle);
+}
+.text-brand-accent {
+  color: var(--brand-accent);
+}
+.border-brand-accent {
+  border-color: var(--brand-accent);
+}
+.hover\:bg-brand-accent-hover:hover {
+  background-color: var(--brand-accent-hover);
+}
+.ring-brand-accent {
+  --tw-ring-color: var(--brand-accent-ring);
+}
+
+/* Glassmorphism & Card highlights */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+  background: rgba(17, 28, 46, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}
+
+/* Print styling for verification reports */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
